@@ -1,4 +1,10 @@
-# Golang Projects
-Collection of mini Golang projects to get familiar with the language
-- JSON coutries: fetch list of countries as per different parameters.
-- HTMl parser: parse the HTML file and analyse the html content like getting all links in the document.
+## Golang Projects
+
+This repo contains all the mini projects I have built to transform myself from a beginner to a pro Golang developer.
+
+These projects are meant to serve as practice applications.
+Following the list of all the projects contained in this repo:
+| Project | Description|  URL |
+| ---- | ---- | ----- | 
+| json-countries | RESTful API for getting info regarding countries, inspired by [Rest countries](https://restcountries.com/) | [Link](https://github.com/rakesh-gupta29/golang-projects/tree/json-countries)
+| books-api | Working with data and filtering of data| [Link](https://github.com/rakesh-gupta29/golang-projects/tree/books-api)
