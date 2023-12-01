@@ -7,4 +7,3 @@ Following the list of all the projects contained in this repo:
 | Project | Description|  URL |
 | ---- | ---- | ----- | 
 | json-countries | RESTful API for getting info regarding countries, inspired by [Rest countries](https://restcountries.com/) | [Link](https://github.com/rakesh-gupta29/golang-projects/tree/json-countries/json-countries)
-| books-api | Working with data and filtering of data| [Link](https://github.com/rakesh-gupta29/golang-projects/tree/html-parser)
