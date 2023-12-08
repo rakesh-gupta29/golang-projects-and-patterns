@@ -1,33 +1,14 @@
 package main
 
-type Updater interface {
-	Update()
-}
-
-type Transform struct {
-	x int32
-}
-
-type PlayerB struct {
-	Transform
-}
-type PlayerA struct {
-	Transform
-}
-
-func (player *PlayerA) Update() {
-	player.x += 1
-
-}
+import "fmt"
 
 func main() {
-	playerA := &PlayerA{}
-	for i := 0; i < 100; i++ {
-		playerA.Update()
-	}
+	// in the simple package, we can have simple properties but when we need to extend the base properties for different people, we will
+	// end up adding extra properties in the struct.
 
-}
+	// this can be solved using intefaces.
 
-func Update(u Updater) {
-	u.Update()
+	fmt.Print("simple.go contains problem")
+	fmt.Print("interfaces.go contains solutions using a better approach")
+
 }

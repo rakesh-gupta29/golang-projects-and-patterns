@@ -1,3 +1,1 @@
-## Struct configurations
-
-- polymorphism
+## Interface Patterns
