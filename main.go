@@ -40,23 +40,19 @@ func main() {
 	app.Get("/", func(c *fiber.Ctx) error {
 		return c.Render("index", fiber.Map{})
 	})
+
 	app.Get("/search", func(c *fiber.Ctx) error {
 
-		apiURL := api + c.Query("ticker")
-		resp, err := http.Get(apiURL)
-		if err != nil {
-			log.Fatal(err)
-		}
-		defer resp.Body.Close()
+		apiURL := api + c.Query("query")
 
-		// Decode the JSON response
-		var countries []models.Country
-		if err := json.NewDecoder(resp.Body).Decode(&countries); err != nil {
-			log.Fatal(err)
-		}
+		body := Fetch(apiURL)
 
-		return c.Render("row", fiber.Map{
-			"Results": data,
+		data := []models.Country{}
+		json.Unmarshal([]byte(body), &data)
+
+		return c.Render("results", fiber.Map{
+			"Results":       data,
+			"DetailsAPIURL": "https://restcountries.com/v3.1/alpha",
 		})
 
 	})
